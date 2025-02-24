@@ -13,7 +13,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
     vim.cmd("wincmd l")
     vim.cmd("split")
     vim.cmd("terminal")
-    vim.cmd("horizontal resize 10")
+    vim.cmd("horizontal resize 15")
     vim.cmd("wincmd k")
   end,
 })
