@@ -5,3 +5,5 @@
 vim.keymap.set("n", "gd", function()
   vim.lsp.buf.definition()
 end, { noremap = true, silent = true, desc = "Go to Definition" })
+
+vim.keymap.set("n", "<leader>er", ":Neotree close | Neotree reveal<CR>", { desc = "Reset Neo-tree root" })
