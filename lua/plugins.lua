@@ -68,4 +68,14 @@ return {
       { "<leader>gg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
     },
   },
+  {
+    "karb94/neoscroll.nvim",
+    event = "WinScrolled",
+    config = function()
+      require("neoscroll").setup()
+    end,
+  },
+  {
+    "mhinz/vim-startify",
+  },
 }

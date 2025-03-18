@@ -1,3 +1,5 @@
+local caps = require("custom.capslock_indicator")
+
 local function git_status()
   local ahead = vim.fn.systemlist("git rev-list --count @{upstream}..HEAD 2>/dev/null")[1] or ""
   local behind = vim.fn.systemlist("git rev-list --count HEAD..@{upstream} 2>/dev/null")[1] or ""
@@ -20,6 +22,7 @@ return {
       "branch",
       "diff",
       git_status,
+      caps.get_status,
     }
   end,
 }

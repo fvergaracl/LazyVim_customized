@@ -6,6 +6,10 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+
+require("custom.capslock_indicator").start_check()
+
+vim.api.nvim_set_hl(0, "LualineCapsLock", { fg = "#FFFFFF", bg = "#FF0000", bold = true })
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
     vim.cmd("Neotree")
@@ -14,6 +18,6 @@ vim.api.nvim_create_autocmd("VimEnter", {
     -- vim.cmd("split")
     -- vim.cmd("terminal")
     -- vim.cmd("horizontal resize 15")
-    vim.cmd("wincmd k")
+    vim.cmd("wincmd l")
   end,
 })
